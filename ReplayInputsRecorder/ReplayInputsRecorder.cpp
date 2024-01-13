@@ -54,9 +54,6 @@ void ReplayInputsRecorder::onLoad()
 				return;
 			}
 
-			UReplay_TA_execTick_Params* param = (UReplay_TA_execTick_Params*)params;
-			if (!param) return;
-
 			int replay_ta_numFrame = *reinterpret_cast<int*>(caller.memory_address + REPLAY_TA_NUM_FRAME_OFFSET);
 			//int replay_ta_currentFrame = *reinterpret_cast<int*>(caller.memory_address + REPLAY_TA_CURRENT_FRAME_OFFSET);
 			float replay_ta_accumulatedDeltaTime = *reinterpret_cast<float*>(caller.memory_address + REPLAY_TA_ACCUMULATED_DELTA_TIME_OFFSET);

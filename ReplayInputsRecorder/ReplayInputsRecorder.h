@@ -14,12 +14,6 @@ constexpr auto plugin_version = stringify(VERSION_MAJOR) "." stringify(VERSION_M
 #define REPLAY_TA_CURRENT_FRAME_OFFSET 0x15C
 #define REPLAY_TA_ACCUMULATED_DELTA_TIME_OFFSET 0x1F0
 
-//Function TAGame.Replay_TA.Tick
-struct UReplay_TA_execTick_Params
-{
-	float DeltaTime;
-};
-
 
 class ReplayInputsRecorder: public BakkesMod::Plugin::BakkesModPlugin, public BakkesMod::Plugin::PluginSettingsWindow/*, public BakkesMod::Plugin::PluginWindow*/
 {
